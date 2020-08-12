@@ -1,0 +1,10 @@
+$colors: (
+  "primary": #262626,
+  "light-gray": #dbdbdb,
+  "medium-gray": #8e8e8e,
+  "background": #fafafa,
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
