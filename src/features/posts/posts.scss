@@ -1,0 +1,48 @@
+@import "../../assets/styles/variables";
+
+section.posts {
+  width: 648px;
+  margin-top: 24px;
+
+  .post {
+    margin-bottom: 50px;
+    background-color: #fff;
+    border: 1px solid color("light-gray");
+    border-radius: 3px;
+
+    .post-header {
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .user-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 32px;
+          max-height: 32px;
+          border-radius: 50%;
+        }
+
+        .username {
+          margin-left: 16px;
+          font-size: 14px;
+          font-weight: 500;
+          color: color("primary");
+        }
+      }
+
+      .more-btn {
+        color: color("primary");
+      }
+    }
+
+    .post-img img {
+      max-width: 647px;
+      height: auto;
+    }
+  }
+}

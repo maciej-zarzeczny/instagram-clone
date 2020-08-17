@@ -3,6 +3,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import { Navbar } from "./app/Navbar/Navbar";
+import { HomePage } from "./app/HomePage/HomePage";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
             exact
             path="/"
             render={() => (
-              <section>
-                <h2>Home page</h2>
-              </section>
+              <>
+                <HomePage />
+              </>
             )}
           />
           <Route
