@@ -6,12 +6,6 @@ article.post {
   border: 1px solid color("light-gray");
   border-radius: 3px;
 
-  .username {
-    font-size: 14px;
-    font-weight: bold;
-    color: color("primary");
-  }
-
   .post-header {
     padding: 16px;
     display: flex;
@@ -22,12 +16,6 @@ article.post {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      img {
-        max-width: 32px;
-        max-height: 32px;
-        border-radius: 50%;
-      }
 
       .details {
         margin-left: 16px;

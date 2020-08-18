@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import { Navbar } from "./app/components/Navbar/Navbar";
 import { HomePage } from "./app/pages/HomePage/HomePage";
 
-function App() {
+export const App = () => {
   return (
     <Router>
       <Navbar />
@@ -34,6 +34,4 @@ function App() {
       </div>
     </Router>
   );
-}
-
-export default App;
+};

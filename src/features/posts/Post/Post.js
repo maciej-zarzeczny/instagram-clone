@@ -15,7 +15,7 @@ export const Post = ({ post }) => {
     <article className="post" key={post.id}>
       <div className="post-header">
         <div className="user-info">
-          <img src={post.userImg} alt="Profile pic" />
+          <img src={post.userImg} alt="Profile pic" className="small-user-img" />
 
           <div className="details">
             <p className="username">{post.user}</p>
@@ -54,7 +54,7 @@ export const Post = ({ post }) => {
 
       <div className="add-comment-form">
         <textarea type="text" className="add-comment-textarea" placeholder="Add a comment..." />
-        <button className="post-comment-btn">Post</button>
+        <button className="plain-btn post-comment-btn">Post</button>
       </div>
     </article>
   );

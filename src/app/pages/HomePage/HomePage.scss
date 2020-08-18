@@ -1,16 +1,33 @@
+@import "../../../assets/styles/variables";
+
 .home-page {
   padding: 30px 0 0 0;
 
   display: grid;
   grid-template-columns: 646px 289px;
-  grid-template-areas: "main side";
+  grid-template-areas: "main-content side-panel";
+  gap: 30px;
 
-  .main {
-    grid-area: main;
+  .main-content {
+    grid-area: main-content;
   }
 
-  .side {
-    grid-area: side;
-    margin-left: 30px;
+  .side-panel {
+    grid-area: side-panel;
+    margin: 12px 0 0 0;
+  }
+}
+
+.loader {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading-logo {
+    width: 64px;
+    height: 64px;
+    color: color("light-gray");
   }
 }

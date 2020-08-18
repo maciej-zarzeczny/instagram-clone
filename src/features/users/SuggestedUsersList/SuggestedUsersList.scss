@@ -1,0 +1,41 @@
+@import "../../../assets/styles/variables";
+
+article.side-panel {
+  position: fixed;
+  width: 289px;
+  margin-left: -30px;
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+
+    .user-info {
+      margin-left: 20px;
+    }
+  }
+
+  section.suggestions {
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      p {
+        font-size: 14px;
+        color: color("medium-gray");
+        font-weight: bold;
+      }
+
+      .see-all-btn {
+        font-size: 12px;
+        color: color("primary");
+        font-weight: bold;
+      }
+    }
+
+    .content {
+      margin-top: 8px;
+    }
+  }
+}
