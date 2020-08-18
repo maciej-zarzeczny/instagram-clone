@@ -2,8 +2,8 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
-import { Navbar } from "./app/Navbar/Navbar";
-import { HomePage } from "./app/HomePage/HomePage";
+import { Navbar } from "./app/components/Navbar/Navbar";
+import { HomePage } from "./app/pages/HomePage/HomePage";
 
 function App() {
   return (

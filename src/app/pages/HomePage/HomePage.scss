@@ -1,0 +1,16 @@
+.home-page {
+  padding: 30px 0 0 0;
+
+  display: grid;
+  grid-template-columns: 646px 289px;
+  grid-template-areas: "main side";
+
+  .main {
+    grid-area: main;
+  }
+
+  .side {
+    grid-area: side;
+    margin-left: 30px;
+  }
+}

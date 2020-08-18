@@ -1,0 +1,119 @@
+@import "../../../assets/styles/variables";
+
+article.post {
+  margin-bottom: 50px;
+  background-color: #fff;
+  border: 1px solid color("light-gray");
+  border-radius: 3px;
+
+  .username {
+    font-size: 14px;
+    font-weight: bold;
+    color: color("primary");
+  }
+
+  .post-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .user-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 32px;
+        max-height: 32px;
+        border-radius: 50%;
+      }
+
+      .details {
+        margin-left: 16px;
+
+        .location {
+          line-height: 1;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .more-btn {
+      color: color("primary");
+    }
+  }
+
+  .post-img img {
+    max-width: 647px;
+    height: auto;
+  }
+
+  .post-controls {
+    margin: 4px 0 0 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .control-icon {
+      width: 24px;
+      height: 24px;
+      padding: 8px;
+      color: color("primary");
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .post-details {
+    padding: 0 16px;
+
+    .likes-number {
+      font-size: 14px;
+      font-weight: bold;
+      color: color("primary");
+      margin: 0 0 8px 0;
+    }
+
+    .content {
+      font-size: 14px;
+      color: color("primary");
+    }
+
+    .timestamp {
+      font-size: 10px;
+      color: color("medium-gray");
+      margin-bottom: 4px;
+      line-height: 1.4rem;
+    }
+  }
+
+  .add-comment-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding: 16px;
+    border-top: 1px solid color("light-gray");
+
+    .add-comment-textarea {
+      resize: none;
+      height: 1.3rem;
+      color: color("primary");
+      font-size: 14px;
+    }
+
+    .post-comment-btn {
+      color: color("blue-accent");
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}

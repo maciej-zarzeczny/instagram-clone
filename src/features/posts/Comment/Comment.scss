@@ -1,0 +1,14 @@
+section.comment {
+  display: flex;
+  justify-content: space-between;
+
+  .comment-content {
+    max-width: 95%;
+  }
+
+  .comment-like-button {
+    width: 12px;
+    height: 12px;
+    color: color("primary");
+  }
+}

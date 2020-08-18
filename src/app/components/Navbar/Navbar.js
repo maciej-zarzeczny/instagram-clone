@@ -7,7 +7,7 @@ import { MdHome, MdPerson, MdSearch } from "react-icons/md";
 import { FiSend, FiCompass } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../../assets/images/logo.png";
 
 export const Navbar = () => {
   return (
