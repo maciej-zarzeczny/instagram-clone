@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 
@@ -24,14 +23,10 @@ export const Navbar = () => {
 
         <ul className="menu">
           <li className="menu-item">
-            <Link to="/">
-              <MdHome />
-            </Link>
+            <MdHome />
           </li>
           <li className="menu-item">
-            <Link to="/messages">
-              <FiSend />
-            </Link>
+            <FiSend />
           </li>
           <li className="menu-item">
             <FiCompass />
