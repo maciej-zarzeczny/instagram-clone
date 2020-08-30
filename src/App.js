@@ -59,5 +59,5 @@ export const App = () => {
     }
   }, [dispatch, currentUserStatus, suggestedUsersStatus]);
 
-  return { content };
+  return <>{content}</>;
 };
