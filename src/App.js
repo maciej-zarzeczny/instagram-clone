@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Navbar } from "./app/components/Navbar/Navbar";
@@ -43,19 +42,7 @@ export const App = () => {
         <>
           <Navbar />
           <div className="App">
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route
-                exact
-                path="/messages"
-                render={() => (
-                  <section>
-                    <h2>Messages</h2>
-                  </section>
-                )}
-              />
-              <Redirect to="/" />
-            </Switch>
+            <HomePage />
           </div>
         </>
       );
@@ -72,5 +59,5 @@ export const App = () => {
     }
   }, [dispatch, currentUserStatus, suggestedUsersStatus]);
 
-  return <Router>{content}</Router>;
+  return { content };
 };
