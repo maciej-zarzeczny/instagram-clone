@@ -1,4 +1,4 @@
-# Sorting Visualizer
+# Instagram clone
 
 [Live website](https://maciekz1996.github.io/instagram-clone)
 
@@ -19,7 +19,7 @@ Clone the repository, install all dependencies and you are ready to go
 Command for cloning the repository
 
 ```
-git clone https://github.com/maciekz1996/sorting-visualizer.git
+git clone https://github.com/maciekz1996/instagram-clone.git
 ```
 
 ### Setup
