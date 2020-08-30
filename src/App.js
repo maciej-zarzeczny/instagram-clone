@@ -17,6 +17,10 @@ export const App = () => {
   const suggestedUsersStatus = useSelector((state) => state.users.suggestedUsers.status);
   const suggestedUsersError = useSelector((state) => state.users.suggestedUsers.error);
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
   let content;
   if (suggestedUsersStatus === "loading" || currentUserStatus === "loading") {
     content = (
@@ -26,7 +30,14 @@ export const App = () => {
     );
   } else {
     if (currentUserError || suggestedUsersError) {
-      content = <h3>Wystąpił błąd, spróbuj ponownie później</h3>;
+      content = (
+        <div className="error-msg-wrapper">
+          <h3 className="error-msg">There was an error, please </h3>
+          <button className="plain-btn refresh-btn" onClick={refreshPage}>
+            refresh
+          </button>
+        </div>
+      );
     } else {
       content = (
         <>
