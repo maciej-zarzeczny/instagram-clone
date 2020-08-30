@@ -15,13 +15,15 @@ export const SuggestedUsersList = () => {
 
   return (
     <article className="side-panel">
-      <div className="user-profile">
-        <img src={currentUser.image} alt="User" className="user-img" />
-        <div className="user-info">
-          <p className="username">{currentUser.username}</p>
-          <p className="small-text">{currentUser.name}</p>
+      {currentUser && (
+        <div className="user-profile">
+          <img src={currentUser.picture.medium} alt="User" className="user-img" />
+          <div className="user-info">
+            <p className="username">{currentUser.login.username}</p>
+            <p className="small-text">{`${currentUser.name.first} ${currentUser.name.last}`}</p>
+          </div>
         </div>
-      </div>
+      )}
 
       <section className="suggestions">
         <header>

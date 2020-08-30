@@ -1,4 +1,5 @@
 @import "./assets/styles/variables";
+@import "./assets/styles/mixins";
 
 .App {
   margin-left: auto;
@@ -27,4 +28,30 @@
 .small-text {
   font-size: 12px;
   color: color("medium-gray");
+}
+
+.plain-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  @include like-btn;
+}
+
+// TABLET VIEW
+@include tablet {
+  .App {
+    width: 600px;
+  }
+}
+
+@include mobile {
+  .App {
+    width: 100vw;
+  }
 }

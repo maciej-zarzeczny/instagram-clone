@@ -1,10 +1,19 @@
 @import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
 
 article.post {
+  width: 100%;
+  height: auto;
   margin-bottom: 50px;
   background-color: #fff;
   border: 1px solid color("light-gray");
   border-radius: 3px;
+
+  @include mobile {
+    margin-bottom: 0;
+    border: none;
+    background-color: color("background");
+  }
 
   .post-header {
     padding: 16px;
@@ -30,12 +39,41 @@ article.post {
 
     .more-btn {
       color: color("primary");
+      cursor: pointer;
     }
   }
 
-  .post-img img {
-    max-width: 647px;
-    height: auto;
+  .post-img {
+    position: relative;
+
+    * {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .post-icon-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .post-icon {
+        font-size: 64px;
+        opacity: 0.95;
+        color: #fff;
+        filter: drop-shadow(0 19px 38px rgba(0, 0, 0, 0.7));
+
+        &.animate {
+          animation: 2s likeAnimation ease-in-out forwards;
+        }
+      }
+    }
   }
 
   .post-controls {
@@ -45,18 +83,25 @@ article.post {
     justify-content: space-between;
     align-items: center;
 
-    .control-icon {
-      width: 24px;
-      height: 24px;
-      padding: 8px;
-      color: color("primary");
+    .icon-btn-wrapper {
+      display: inline;
 
       &:first-of-type {
-        padding-left: 0;
+        margin-left: -8px;
       }
 
       &:last-of-type {
-        padding-right: 0;
+        margin-right: -8px;
+      }
+    }
+
+    .bookmark-btn {
+      &:not(.is-active):hover {
+        opacity: 0.6;
+      }
+
+      &.is-active path {
+        fill: color("primary");
       }
     }
   }
@@ -85,6 +130,10 @@ article.post {
   }
 
   .add-comment-form {
+    @include mobile {
+      display: none;
+    }
+
     display: flex;
     justify-content: space-between;
     margin-top: 4px;
@@ -99,9 +148,35 @@ article.post {
     }
 
     .post-comment-btn {
-      color: color("blue-accent");
+      color: color("blue-accent-inactive");
       font-weight: bold;
       font-size: 14px;
+
+      &.is-active {
+        color: color("blue-accent");
+        cursor: pointer;
+      }
     }
+  }
+}
+
+// Like animation
+@keyframes likeAnimation {
+  0% {
+    width: 0;
+  }
+  5% {
+    width: 100px;
+  }
+  10% {
+    width: 70px;
+  }
+  20%,
+  35% {
+    width: 80px;
+  }
+  40%,
+  100% {
+    width: 0;
   }
 }

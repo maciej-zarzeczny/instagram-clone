@@ -1,6 +1,16 @@
 @import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
 
 section.posts {
-  width: 648px;
   margin-top: 24px;
+  width: 614px;
+  height: auto;
+
+  @include tablet {
+    width: 600px;
+  }
+
+  @include mobile {
+    width: 100vw;
+  }
 }
