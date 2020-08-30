@@ -1,0 +1,73 @@
+@import "./variables";
+
+@mixin like-animation {
+  animation: 1s likeBtnAnimation ease-in-out forwards;
+}
+
+@mixin dislike-animation {
+  animation: 1s dislikeBtnAnimation ease-in-out forwards;
+}
+
+@mixin like-btn {
+  cursor: pointer;
+  color: color("primary");
+  @content;
+
+  &.is-disliked {
+    @include dislike-animation;
+  }
+
+  &.is-liked {
+    @include like-animation;
+
+    path {
+      fill: color("like");
+      stroke: color("like");
+    }
+  }
+}
+
+@keyframes likeBtnAnimation {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  40%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dislikeBtnAnimation {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  40%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+// MEDIA QUERIES
+@mixin tablet {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}

@@ -1,10 +1,11 @@
 @import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
 
 .home-page {
   padding: 30px 0 0 0;
 
   display: grid;
-  grid-template-columns: 646px 289px;
+  grid-template-columns: 614px 293px;
   grid-template-areas: "main-content side-panel";
   gap: 30px;
 
@@ -29,5 +30,23 @@
     width: 64px;
     height: 64px;
     color: color("light-gray");
+  }
+}
+
+// TABLET VIEW
+@include tablet {
+  .home-page {
+    display: inline-block;
+
+    .side-panel {
+      display: none;
+    }
+  }
+}
+
+// MOBILE VIEW
+@include mobile {
+  .home-page {
+    padding: 1px 0;
   }
 }

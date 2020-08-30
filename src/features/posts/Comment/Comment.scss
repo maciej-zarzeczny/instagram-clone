@@ -1,14 +1,17 @@
+@import "../../../assets/styles/mixins";
+
 section.comment {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .comment-content {
     max-width: 95%;
   }
 
   .comment-like-button {
+    @include like-btn;
     width: 12px;
     height: 12px;
-    color: color("primary");
   }
 }

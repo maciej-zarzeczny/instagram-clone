@@ -1,4 +1,5 @@
 @import "./assets/styles/variables";
+@import "./assets/styles/mixins";
 
 .App {
   margin-left: auto;
@@ -27,4 +28,55 @@
 .small-text {
   font-size: 12px;
   color: color("medium-gray");
+}
+
+.plain-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  @include like-btn;
+}
+
+.error-msg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 16px;
+
+  .error-msg {
+    color: color("primary");
+  }
+
+  .refresh-btn {
+    color: color("blue-accent");
+    font-weight: bold;
+    font-size: 18.72px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+// TABLET VIEW
+@include tablet {
+  .App {
+    width: 600px;
+  }
+}
+
+// MOBILE VIEW
+
+@include mobile {
+  .App {
+    width: 100vw;
+  }
 }

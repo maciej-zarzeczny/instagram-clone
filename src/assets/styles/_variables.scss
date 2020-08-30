@@ -4,7 +4,9 @@ $colors: (
   "medium-gray": #8e8e8e,
   "background": #fafafa,
   "accent": #c62e90,
+  "like": #ed4956,
   "blue-accent": #0096f6,
+  "blue-accent-inactive": #c0e0fd,
 );
 
 @function color($key) {
