@@ -2,7 +2,7 @@
 
 [Live website](https://maciekz1996.github.io/instagram-clone)
 
-This project was created using React and Redux. It is a clone of instagram website. The main purpose of this project was to replicate instagram UI with some basic functionality. The data inside the app such as users are fetched asynchronously from https://randomuser.me/ API using axios library.
+This project was created using React and Redux. It is a clone of instagram website. The main purpose of this project was to replicate instagram UI with some basic functionality. Data inside the app such as users are fetched asynchronously from https://randomuser.me/ API using axios library.
 
 **Technologies used:**
 * React (creat-react-app)
